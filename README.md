@@ -31,7 +31,7 @@ DB設計
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |email|text|null: false|
-|encrypted_passward|text|null: false|
+|encrypted_password|text|null: false|
 
 ### Association
 has_many :chats
