@@ -18,20 +18,18 @@ DB設計
 |name|string|null: false|
 
 ### Association
-- has_many :member
-- has_many :users,through:member
+- has_many :members
+- has_many :users,through:members
+- has_many :messages
+
 
 ## messagesテーブル
 
 |Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false|
-|group_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
+|------|----|-------||
 |image|string||
 |text|text||
-|creted_at|timestamp|null: false|
-|update_at|timestamp|null: false|
+
 
 ### Association
 - belongs_to :user
@@ -47,3 +45,5 @@ DB設計
 ### Association
 - has_many :messages
 - has_many :groups
+- has_many :members
+- has_many :groups,through:members
