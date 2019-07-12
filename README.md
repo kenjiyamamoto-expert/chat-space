@@ -11,7 +11,7 @@ DB設計
 - belongs_to :group
 - belongs_to :user
 
-## chatsテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -35,5 +35,5 @@ DB設計
 |encrypted_password|text|null: false|
 
 ### Association
-- has_many :chats
+- has_many :messages
 - belongs_to :group
