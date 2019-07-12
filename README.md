@@ -11,6 +11,17 @@ DB設計
 - belongs_to :group
 - belongs_to :user
 
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_name|string|null: false|
+|group_name|string|null: false|
+
+### Association
+- has_many :messages
+- has_many :users
+
 ## messagesテーブル
 
 |Column|Type|Options|
