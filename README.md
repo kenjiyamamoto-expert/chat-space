@@ -15,12 +15,11 @@ DB設計
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
-- has_many :messages
-- has_many :users
+- has_many :member
+- has_many :users,through:member
 
 ## messagesテーブル
 
@@ -43,7 +42,7 @@ DB設計
 |Column|Type|Options|
 |------|----|-------|
 |email|text|null: false|
-|encrypted_password|text|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
