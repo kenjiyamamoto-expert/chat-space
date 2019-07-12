@@ -16,8 +16,9 @@ DB設計
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false|
-|chat_id|integer|null: false, foreign_key: true|
-|image|text||
+|group_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
+|image|string||
 |text|text||
 |creted_at|timestamp|null: false|
 |update_at|timestamp|null: false|
@@ -30,10 +31,9 @@ DB設計
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false,primary key:true|
 |email|text|null: false|
 |encrypted_password|text|null: false|
 
 ### Association
 - has_many :messages
-- belongs_to :group
+- has_many :groups
