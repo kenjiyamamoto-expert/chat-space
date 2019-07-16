@@ -17,5 +17,7 @@ module ChatSpace
       g.helper false
       g.test_framework false
     end
+    # フラッシュメッセージのデフォルト言語から日本語へ翻訳
+    config.i18n.default_locale = :ja
   end
 end

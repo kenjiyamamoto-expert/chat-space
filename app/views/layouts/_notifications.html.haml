@@ -1,0 +1,4 @@
+-# applicatio.html.hamlの部分テンプレート
+.notification
+  - flash.each do |key, value|
+    = content_tag :div, value, class: key

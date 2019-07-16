@@ -38,23 +38,27 @@
        }
      }
    }
+
    &__group{
      width: 300px;
      height: calc(100vh - 100px);
      background-color: #2f3e51;
      padding: 20px 20px 0;
-     &__group-name{
-       font-size:15px;
-       font-weight:bold;
-       color:#FFFFFF;
-       padding: 20px 0px 5px 0px;
-     }
-     &__latest-message{
-       font-size:11px;
-       font-weight:bold;
-       color:#FFFFFF;
-       padding-bottom:40px;
-     }
+      &__list{
+       margin-bottom: 40px; 
+       &__group-name{
+        font-size:15px;
+        font-weight:bold;
+        color:#FFFFFF;
+        padding: 20px 0px 5px 0px;
+       }
+       &__latest-message{
+        font-size:11px;
+        font-weight:bold;
+        color:#FFFFFF;
+        padding-bottom:40px;
+       }
+      }
    }
  }
 
@@ -138,4 +142,3 @@
    }
  }
 }
-
