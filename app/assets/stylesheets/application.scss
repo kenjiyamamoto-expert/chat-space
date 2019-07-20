@@ -1,4 +1,4 @@
-@import "messages";
+// @import "messages";
 @import "./reset";
 // deviseのビューファイルの追加
 @import "font-awesome";
@@ -9,8 +9,11 @@
 @import "modules/flash";
 // グループ機能の実装
 @import "modules/group";
+@import "modules/chat";
+@import "modules/side_bar";
+
+
+
 
 // Lesson9で作成したscss（不要になったのでコメントアウト）
 // @import "modules/font_size";
-// @import "modules/side_bar";
-// @import "modules/chat";

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   # グループ機能の実装
   resources :groups, only: [:new, :create, :edit, :update] do
+    # メッセージ送信機能の実装
     resources :messages, only: [:index, :create]
   end
 end

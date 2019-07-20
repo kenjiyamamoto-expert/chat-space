@@ -1,5 +1,6 @@
 .chat {
   width: calc(100% - 300px);
+  float:right;
   .header {
     box-sizing: border-box;
     height: 100px;
@@ -12,8 +13,8 @@
         margin-top: 35px;
       }
       &__members {
-        @include flexbox;
-        color: $light_gray;
+        display: flex;
+        color: gray;
         font-size: 12px;
         margin-top: 15px;
         .member {
@@ -41,6 +42,7 @@
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 46px 40px 0;
+    padding-bottom:90px;
     height: calc(100% - 100px - 90px);
     .message {
       .upper-message {
@@ -68,6 +70,9 @@
   }
 
   .form {
+    width: calc(100% - 300px);
+    position:fixed;
+    bottom:0;
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
