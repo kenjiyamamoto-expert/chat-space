@@ -17,13 +17,13 @@ $.ajax({
   // サーバーから値が正しく返ってきた場合
   .done(function(message){
     // buildMessageの結果(html)が反映される
-  var html= buildMessage(message);
-  $('.message').append(html);
-  // 送信ボタンを押したらテキスト欄が空になる
-  $('#message_content').val('');
-  //データ受け取り後画面最下部までスクロール
-  $('html').animate({ scrollTop: $('html')[0].scrollHeight});
-  return false;
+   var html= buildMessage(message);
+   $('.message').append(html);
+   // 送信ボタンを押したらテキスト欄が空になる
+   $('#message_content').val('');
+   //データ受け取り後画面最下部までスクロール
+   $('html').animate({ scrollTop: $('html')[0].scrollHeight});
+   return false;
   })
 
   // 正しく返ってこなかった場合
@@ -35,7 +35,7 @@ $.ajax({
 
   function buildMessage(message){
     // テンプレートリテラルを用いてappendしたい情報を記載
-
+    
     var images=(
     message.image ? message.image:''
     );
