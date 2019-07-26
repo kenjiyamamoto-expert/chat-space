@@ -4,12 +4,14 @@
   .header
    .left-header
     .left-header__title
-     グループ
+    = @group.name
     .left-header__members
-     メッセージ
+    = @group.show_last_message
    .right-header
     .right-header__button
-     Edit
+    =link_to edit_group_path(@group) do
+     edit
+     
 
   .messages
    = render @messages
