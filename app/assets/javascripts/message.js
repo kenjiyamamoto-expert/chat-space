@@ -35,26 +35,26 @@ $(function(){
  function buildMessage(message){
   // テンプレートリテラルを用いてappendしたい情報を記載
   // 三項演算子を使い、画像データが投稿されない場合は空欄を表示
-  var images= message.image_url ? message.image_url : '';
+  var image= message.image_url ? message.image_url : '';
   // 上記で定義したimagesをhtml内に記述
   var html= `<div class="message" data-message-id="${message.id}">
-             <div class="upper-message">
-             <div class="upper-message__user-name">
-             ${message.user_name}
+              <div class="upper-message">
+               <div class="upper-message__user-name">
+               ${message.user_name}
+               </div>
+               <div class="upper-message__date">
+               ${message.created_at}
+               </div>
+              </div>
+              <div class="lower-message">
+               <p class="lower-message__content">
+               ${message.content}
+               </p>
+               <img class="lower-message__image" 
+               src= '${image}'>
+              </div>
              </div>
-             <div class="upper-message__date">
-             ${message.created_at}
-             </div>
-             </div>
-             <div class="lower-message">
-             <p class="lower-message__content">
-             ${message.content}
-             </p>
-             <img class="lower-message__image" 
-             src= '${images}'>
-             </div>
-             </div>
-             `
+            `
   return html;
   }
 
@@ -63,8 +63,7 @@ $(function(){
    if (window.location.href.match(/\/groups\/\d+\/messages/)){
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id = $('.message:last').data("message-id");
-
-    // console.log(last_message_id )
+    
     $.ajax({
       //ルーティングで設定した通りのURLを指定
       url: "api/messages",
