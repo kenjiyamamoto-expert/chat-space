@@ -19,7 +19,7 @@ $(function(){
    var html= buildMessage(message);
    $('.message').append(html);
    // 送信ボタンを押したらテキスト欄が空になる
-   $('#message_content')[0].reset();
+   $('.new_message')[0].reset();
    //データ受け取り後画面最下部までスクロール
    $('html').animate({ scrollTop: $('html')[0].scrollHeight});
    return false;
@@ -63,7 +63,7 @@ $(function(){
    if (window.location.href.match(/\/groups\/\d+\/messages/)){
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id = $('.message:last').data("message-id");
-    
+
     $.ajax({
       //ルーティングで設定した通りのURLを指定
       url: "api/messages",
