@@ -19,7 +19,7 @@ $(function(){
    var html= buildMessage(message);
    $('.message').append(html);
    // 送信ボタンを押したらテキスト欄が空になる
-   $('#message_content').val('');
+   $('#message_content')[0].reset();
    //データ受け取り後画面最下部までスクロール
    $('html').animate({ scrollTop: $('html')[0].scrollHeight});
    return false;
@@ -91,7 +91,7 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert('エラー');
     });
   };
  };
