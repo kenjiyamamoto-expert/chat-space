@@ -8,5 +8,10 @@ Rails.application.routes.draw do
   resources :groups, only: [:new, :create, :edit, :update] do
     # メッセージ送信機能の実装
     resources :messages, only: [:index, :create]
+
+    # 自動更新に必要なAPIアクションのルーティングを実装
+    namespace :api do
+      resources :messages, only: :index, defaults: { format: 'json' }
+    end
   end
 end
