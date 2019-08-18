@@ -4,9 +4,12 @@
   .header
    .left-header
     .left-header__title
-    = @group.name
+     = @group.name
     .left-header__members
-    = @group.show_last_message
+     Member :
+     -@group.users.each do |user|
+      .left-header__members__member
+       =user.name+','
    .right-header
     .right-header__button
     =link_to edit_group_path(@group) do
