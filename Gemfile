@@ -69,5 +69,10 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 
+#  Unicornをインストール
+group :production do
+  gem 'unicorn', '5.4.1'
+end
+
 
 
