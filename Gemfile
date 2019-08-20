@@ -75,6 +75,9 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 
+# 画像をアップロードする際、外部のストレージを選択しアップロードするのを補助してくれるGemを導入
+gem 'fog-aws'
+
 #  Unicornをインストール
 group :production do
   gem 'unicorn', '5.4.1'
