@@ -17,7 +17,7 @@ $(function(){
   .done(function(message){
     // buildMessageの結果(html)が反映される
    var html= buildMessage(message);
-   $('.message').append(html);
+   $('.messages').append(html);
    // 送信ボタンを押したらテキスト欄が空になる
    $('.new_message')[0].reset();
    //データ受け取り後画面最下部までスクロール
