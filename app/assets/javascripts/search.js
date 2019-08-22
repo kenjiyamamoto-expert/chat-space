@@ -46,10 +46,9 @@ $(document).on('turbolinks:load', function(){
 
   // 削除ボタンを押しイベントを発火させる
   $('.chat-group-usersjs-add-user').on('click', '.user-search-remove', function(){
-   // 親要素の取得
-   $(this).parent();
+   // 親要素の取得し、
    // 取得した親要素を削除
-   $('#chat-group-user-7').remove();
+   $(this).parent().remove();
   });
 
   $("#user-search-field").on("keyup",function(){
